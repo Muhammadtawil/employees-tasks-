@@ -44,8 +44,7 @@ class _SelectLangState extends State<SelectLanguage> {
         height: MediaQuery.of(context).size.height,
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image: ExactAssetImage(PathImage.background2),
-                fit: BoxFit.cover)),
+                image: ExactAssetImage(background2), fit: BoxFit.cover)),
         child: ListView(
           padding: const EdgeInsets.symmetric(vertical: 150, horizontal: 30),
           children: [
@@ -54,8 +53,8 @@ class _SelectLangState extends State<SelectLanguage> {
               width: 300,
               height: 300,
               decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: ExactAssetImage(PathImage.logo), scale: 5)),
+                  image:
+                      DecorationImage(image: ExactAssetImage(logo), scale: 5)),
             ),
 
             DropdownButton(
@@ -65,10 +64,10 @@ class _SelectLangState extends State<SelectLanguage> {
               value: selectedValue,
               icon: const Icon(Icons.arrow_drop_down_sharp),
               elevation: 16,
-              style: TextStyle(color: MyColors.black),
+              style: TextStyle(color: black),
               underline: Container(
                 height: 3,
-                color: MyColors.primary.withOpacity(.5),
+                color: primary.withOpacity(.5),
               ),
               onChanged: (newValue) {
                 setState(() {
@@ -102,7 +101,7 @@ class _SelectLangState extends State<SelectLanguage> {
                   // * line one
 
                   Btn(
-                    borderColor: MyColors.primary,
+                    borderColor: primary,
                     title: 'Coutinue',
                     borderRadius: BorderRadius.circular(3),
                     margin: const EdgeInsets.all(5),
@@ -113,9 +112,9 @@ class _SelectLangState extends State<SelectLanguage> {
                           MaterialPageRoute(
                               builder: (context) => const HomePage()));
                     },
-                    textColor: MyColors.offPrimary,
+                    textColor: offPrimary,
                     textSize: 15,
-                    color: MyColors.primary,
+                    color: primary,
                     width: 300,
                   ),
                 ],
