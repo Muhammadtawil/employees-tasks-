@@ -5,8 +5,10 @@ import 'package:flutter/services.dart';
 import '../utilis/color.dart';
 import '../utilis/pathimage.dart';
 import '../widgets/btn.dart';
+import 'form_build.dart';
 
 class Login extends StatefulWidget {
+  static const routeName = '/login';
   const Login({Key? key}) : super(key: key);
 
   @override
@@ -14,6 +16,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  final form = GlobalKey<FormState>();
   bool? isRememberMe = false;
   Widget buildRemberMe() {
     return SizedBox(
@@ -76,16 +79,15 @@ class _LoginState extends State<Login> {
                             fit: BoxFit.fitWidth),
                       ),
                     ),
-
                     const SizedBox(
                       height: 20,
                     ),
-                    // buildEmail(),
+                    buildEmail(),
                     const SizedBox(
                       height: 10,
                     ),
-                    // buildPassword(),
-                    // buildForgotPassword(),
+                    buildPassword(),
+                    buildForgotPassword(),
                     const SizedBox(
                       height: 0,
                     ),
@@ -160,3 +162,41 @@ class _LoginState extends State<Login> {
 //       ),
 //     ),
 //   ),
+
+// you can use form instead of textfields  
+
+      // Form(
+      //                   child: Column(
+      //                 children: [
+      //                   Padding(
+      //                     padding: const EdgeInsets.all(10.0),
+      //                     child: TextFormField(
+      //                       decoration: InputDecoration(
+      //                         filled: true,
+      //                         fillColor: Colors.white,
+      //                         enabledBorder: OutlineInputBorder(
+      //                           borderSide: const BorderSide(
+      //                               width: 3,
+      //                               color: Colors.greenAccent), //<-- SEE HERE
+      //                           borderRadius: BorderRadius.circular(10.0),
+      //                         ),
+      //                       ),
+      //                     ),
+      //                   ),
+      //                   Padding(
+      //                     padding: const EdgeInsets.all(10.0),
+      //                     child: TextFormField(
+      //                       decoration: InputDecoration(
+      //                         filled: true,
+      //                         fillColor: Colors.white,
+      //                         enabledBorder: OutlineInputBorder(
+      //                           borderSide: const BorderSide(
+      //                               width: 3,
+      //                               color: Colors.greenAccent), //<-- SEE HERE
+      //                           borderRadius: BorderRadius.circular(10.0),
+      //                         ),
+      //                       ),
+      //                     ),
+      //                   ),
+      //                 ],
+      //               )),
