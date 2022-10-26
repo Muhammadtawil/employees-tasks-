@@ -64,10 +64,10 @@ class _SelectLangState extends State<SelectLanguage> {
               value: selectedValue,
               icon: const Icon(Icons.arrow_drop_down_sharp),
               elevation: 16,
-              style: TextStyle(color: MyColors.black),
+              style: TextStyle(color: black),
               underline: Container(
                 height: 3,
-                color: MyColors.primary.withOpacity(.5),
+                color: primary.withOpacity(.5),
               ),
               onChanged: (newValue) {
                 setState(() {
@@ -101,7 +101,7 @@ class _SelectLangState extends State<SelectLanguage> {
                   // * line one
 
                   Btn(
-                    borderColor: MyColors.primary,
+                    borderColor: primary,
                     title: 'Coutinue',
                     borderRadius: BorderRadius.circular(3),
                     margin: const EdgeInsets.all(5),
@@ -112,9 +112,9 @@ class _SelectLangState extends State<SelectLanguage> {
                           MaterialPageRoute(
                               builder: (context) => const HomePage()));
                     },
-                    textColor: MyColors.offPrimary,
+                    textColor: offPrimary,
                     textSize: 15,
-                    color: MyColors.primary,
+                    color: primary,
                     width: 300,
                   ),
                 ],
