@@ -1,4 +1,6 @@
 import 'package:employeestasks/models/language.dart';
+import 'package:employeestasks/pages/employee_info.dart';
+import 'package:employeestasks/pages/home_screen.dart';
 import 'package:employeestasks/pages/login.dart';
 import 'package:employeestasks/pages/select_langauge.dart';
 import 'package:flutter/material.dart';
@@ -28,6 +30,8 @@ class MyApp extends StatelessWidget {
         home: const SelectLanguages(),
         routes: {
           Login.routeName: (context) => const Login(),
+          HomePage.routeName: (context) => const HomePage(),
+          EmployeeInfo.routeName: (context) => const EmployeeInfo(),
         },
       ),
     );
