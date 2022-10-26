@@ -44,8 +44,7 @@ class _SelectLangState extends State<SelectLanguage> {
         height: MediaQuery.of(context).size.height,
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image: ExactAssetImage(PathImage.background2),
-                fit: BoxFit.cover)),
+                image: ExactAssetImage(background2), fit: BoxFit.cover)),
         child: ListView(
           padding: const EdgeInsets.symmetric(vertical: 150, horizontal: 30),
           children: [
@@ -54,8 +53,8 @@ class _SelectLangState extends State<SelectLanguage> {
               width: 300,
               height: 300,
               decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: ExactAssetImage(PathImage.logo), scale: 5)),
+                  image:
+                      DecorationImage(image: ExactAssetImage(logo), scale: 5)),
             ),
 
             DropdownButton(
@@ -77,7 +76,7 @@ class _SelectLangState extends State<SelectLanguage> {
               },
               items: language.map((Map map) {
                 return DropdownMenuItem<String>(
-                  value: map["id"].toString(),
+                  value: map["id"],
                   child: Row(
                     children: <Widget>[
                       Image.asset(

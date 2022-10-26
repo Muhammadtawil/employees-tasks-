@@ -74,8 +74,7 @@ class _SplashState extends State<Splash> {
             height: MediaQuery.of(context).size.height,
             decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: ExactAssetImage(PathImage.background1),
-                    fit: BoxFit.cover)),
+                    image: ExactAssetImage(background1), fit: BoxFit.cover)),
             child: AnimationConfiguration.staggeredList(
               position: 0,
               duration: const Duration(milliseconds: 500),
@@ -87,8 +86,7 @@ class _SplashState extends State<Splash> {
                       height: 200,
                       decoration: const BoxDecoration(
                           image: DecorationImage(
-                              image: ExactAssetImage(PathImage.logo),
-                              scale: 3)),
+                              image: ExactAssetImage(logo), scale: 3)),
                     ),
                   ),
                 ),
