@@ -11,6 +11,7 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
+      elevation: 0,
       //bottom navigation bar on scaffold
       color: const Color(0xff696b9e),
       shape: const CircularNotchedRectangle(), //shape of notch
@@ -31,7 +32,7 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
           ),
           IconButton(
             icon: const Icon(
-              Icons.home,
+              Icons.house_outlined,
               color: Colors.white,
             ),
             onPressed: () {

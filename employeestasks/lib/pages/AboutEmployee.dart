@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../utilis/color.dart';
 import '../utilis/pathimage.dart';
+import '../widgets/bottom_nav_bar.dart';
 import '../widgets/label_text_field.dart';
 import '../widgets/my_drawer.dart';
 
@@ -110,6 +111,7 @@ class AboutEmployee extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: const BottomNavBarWidget(),
     );
   }
 }
