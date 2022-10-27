@@ -7,40 +7,46 @@ import '../widgets/bottom_nav_bar.dart';
 import '../widgets/label_text_field.dart';
 import '../widgets/my_drawer.dart';
 
-class AboutEmployee extends StatelessWidget {
+class AboutEmployee extends StatefulWidget {
   static const routeName = '/about/employee';
   const AboutEmployee({Key? key}) : super(key: key);
 
   @override
+  State<AboutEmployee> createState() => _AboutEmployeeState();
+}
+
+class _AboutEmployeeState extends State<AboutEmployee> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        leading: IconButton(
-          onPressed: () {
-            Scaffold.of(context).openDrawer();
-          },
-          icon: const Icon(
-            Icons.list,
-            size: 35,
-            color: Colors.deepPurple,
-          ),
-        ),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.notifications,
-                color: Colors.deepPurple,
-              ))
-        ],
-      ),
       drawer: const CustomDrawer(),
       body: AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle.light,
         child: Stack(
           children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(top: 20, right: 5, left: 5),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      setState(() {
+                        Scaffold.of(context).openDrawer();
+                      });
+                    },
+                    icon: const Icon(
+                      Icons.list,
+                      size: 35,
+                      color: Colors.deepPurple,
+                    ),
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.message_outlined)),
+                ],
+              ),
+            ),
             Container(
               height: double.infinity,
               width: double.infinity,

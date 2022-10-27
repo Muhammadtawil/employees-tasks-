@@ -1,5 +1,4 @@
-import 'package:employeestasks/pages/AboutEmployee.dart';
-import 'package:employeestasks/pages/employee_info.dart';
+import 'package:employeestasks/pages/about_employee.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter/services.dart';

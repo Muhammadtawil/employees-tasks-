@@ -1,5 +1,5 @@
 import 'package:employeestasks/models/language.dart';
-import 'package:employeestasks/pages/AboutEmployee.dart';
+import 'package:employeestasks/pages/about_employee.dart';
 import 'package:employeestasks/pages/employee_info.dart';
 import 'package:employeestasks/pages/home_screen.dart';
 import 'package:employeestasks/pages/login.dart';
