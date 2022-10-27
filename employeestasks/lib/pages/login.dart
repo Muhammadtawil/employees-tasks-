@@ -1,5 +1,5 @@
+import 'package:employeestasks/pages/AboutEmployee.dart';
 import 'package:employeestasks/pages/employee_info.dart';
-import 'package:employeestasks/pages/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter/services.dart';
@@ -105,7 +105,7 @@ class _LoginState extends State<Login> {
                       height: 50,
                       onPressed: () {
                         Navigator.of(context)
-                            .pushReplacementNamed(EmployeeInfo.routeName);
+                            .pushReplacementNamed(AboutEmployee.routeName);
                       },
                       textColor: offPrimary,
                       textSize: 15,

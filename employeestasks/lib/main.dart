@@ -1,4 +1,5 @@
 import 'package:employeestasks/models/language.dart';
+import 'package:employeestasks/pages/AboutEmployee.dart';
 import 'package:employeestasks/pages/employee_info.dart';
 import 'package:employeestasks/pages/home_screen.dart';
 import 'package:employeestasks/pages/login.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
           Login.routeName: (context) => const Login(),
           HomePage.routeName: (context) => const HomePage(),
           EmployeeInfo.routeName: (context) => const EmployeeInfo(),
+          AboutEmployee.routeName: (context) => const AboutEmployee(),
         },
       ),
     );
