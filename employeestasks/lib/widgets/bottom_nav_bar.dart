@@ -1,3 +1,6 @@
+import 'package:employeestasks/pages/about_employee.dart';
+import 'package:employeestasks/pages/info.dart';
+import 'package:employeestasks/pages/profile.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBarWidget extends StatefulWidget {
@@ -26,9 +29,7 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
               Icons.collections_bookmark_outlined,
               color: Colors.white,
             ),
-            onPressed: () {
-              // Navigator.of(context).pushNamed(HomePage.routeName);
-            },
+            onPressed: () {},
           ),
           IconButton(
             icon: const Icon(
@@ -36,8 +37,7 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
               color: Colors.white,
             ),
             onPressed: () {
-              // Navigator.of(context)
-              //     // .pushReplacementNamed(CollectionScreen.routeName);
+              Navigator.of(context).pushNamed(AboutEmployee.routeName);
             },
           ),
           IconButton(
@@ -47,7 +47,7 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
             ),
             onPressed: () {
               // Provider.of<Auth>(context, listen: false).logout();
-              // Navigator.of(context).pushNamed(CollectionsDropDown.routeName);
+              Navigator.of(context).pushNamed(Info.routeName);
             },
           ),
           IconButton(
@@ -56,7 +56,7 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
               color: Colors.white,
             ),
             onPressed: () {
-              // Navigator.of(context).pushNamed(SettingsScreen.routeName);
+              Navigator.of(context).pushNamed(Profile.routeName);
             },
           ),
         ],

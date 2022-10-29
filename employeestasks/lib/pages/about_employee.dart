@@ -1,3 +1,4 @@
+import 'package:employeestasks/widgets/head.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -24,29 +25,7 @@ class _AboutEmployeeState extends State<AboutEmployee> {
         value: SystemUiOverlayStyle.light,
         child: Stack(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(top: 20, right: 5, left: 5),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      setState(() {
-                        Scaffold.of(context).openDrawer();
-                      });
-                    },
-                    icon: const Icon(
-                      Icons.list,
-                      size: 35,
-                      color: Colors.deepPurple,
-                    ),
-                  ),
-                  IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.message_outlined)),
-                ],
-              ),
-            ),
+            const AppHead(),
             Container(
               height: double.infinity,
               width: double.infinity,
