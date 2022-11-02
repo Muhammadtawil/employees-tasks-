@@ -1,4 +1,5 @@
 import 'package:employeestasks/pages/about_employee.dart';
+import 'package:employeestasks/pages/employees_info.dart';
 import 'package:employeestasks/pages/info.dart';
 import 'package:employeestasks/pages/profile.dart';
 import 'package:flutter/material.dart';
@@ -47,7 +48,7 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
             ),
             onPressed: () {
               // Provider.of<Auth>(context, listen: false).logout();
-              Navigator.of(context).pushNamed(Info.routeName);
+              Navigator.of(context).pushNamed(EmployeesInfo.routeName);
             },
           ),
           IconButton(

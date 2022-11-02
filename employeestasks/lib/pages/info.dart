@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MaterialApp(home: Info()));
-}
-
 class Info extends StatelessWidget {
   static const routeName = '/info';
   const Info({super.key});
@@ -16,16 +12,14 @@ class Info extends StatelessWidget {
         title: const Text("Expandable List"),
         backgroundColor: Colors.redAccent,
       ),
-      body: Column(children: [
-        ListView.builder(
-          itemBuilder: (BuildContext context, int index) {
-            return ExpandableListView(
-              title: "Title $index",
-            );
-          },
-          itemCount: 5,
-        ),
-      ]),
+      body: ListView.builder(
+        itemBuilder: (BuildContext context, int index) {
+          return ExpandableListView(
+            title: "Title $index",
+          );
+        },
+        itemCount: 5,
+      ),
     );
   }
 }

@@ -1,6 +1,8 @@
+import 'package:employeestasks/models/employee.dart';
 import 'package:employeestasks/models/language.dart';
 import 'package:employeestasks/pages/about_employee.dart';
 import 'package:employeestasks/pages/employee_info.dart';
+import 'package:employeestasks/pages/employees_info.dart';
 import 'package:employeestasks/pages/home_screen.dart';
 import 'package:employeestasks/pages/info.dart';
 import 'package:employeestasks/pages/login.dart';
@@ -22,6 +24,9 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
           create: (context) => LangaugeProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => EmployeeProvider(),
         )
       ],
       child: MaterialApp(
@@ -38,6 +43,7 @@ class MyApp extends StatelessWidget {
           AboutEmployee.routeName: (context) => const AboutEmployee(),
           Profile.routeName: (context) => const Profile(),
           Info.routeName: (context) => const Info(),
+          EmployeesInfo.routeName: (context) => const EmployeesInfo(),
         },
       ),
     );

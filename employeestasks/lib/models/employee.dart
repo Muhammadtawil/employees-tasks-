@@ -12,4 +12,13 @@ class Employee {
       this.dateOfBirth, this.dateOfJoin);
 }
 
-class EmployeeProvider with ChangeNotifier {}
+class EmployeeProvider with ChangeNotifier {
+  final List<Employee> _employeeList = [
+    Employee('name', 'residence', 'phone', 'country', 'date Of Birth',
+        'date Of Join')
+  ];
+
+  List<Employee> get employeeList {
+    return [..._employeeList];
+  }
+}

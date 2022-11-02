@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../utilis/color.dart';
 import '../utilis/pathimage.dart';
-import '../widgets/bottom_nav_bar.dart';
 import '../widgets/head.dart';
 
 class Profile extends StatefulWidget {
@@ -15,8 +14,6 @@ class Profile extends StatefulWidget {
 
 class _ProfileState extends State<Profile> {
   bool isExpanded = false;
-  bool isExpanded2 = false;
-  bool isExpanded3 = false;
 
   final List<String> employee = [
     'name',
@@ -25,6 +22,11 @@ class _ProfileState extends State<Profile> {
     'country',
     'date Of Birth',
     'date Of Join'
+  ];
+  final List<String> titles = [
+    'Basic Employee Information',
+    'Basic Employee Information',
+    'Basic Employee Information',
   ];
   @override
   Widget build(BuildContext context) {
